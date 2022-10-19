@@ -9,18 +9,15 @@ namespace ConversiotionNumber_finalProject
     internal class HexaNumber
     {
         List<int> inputNumber = new List<int>();
-        
+       
         public HexaNumber(string inputNumber1)
         {
             //this for used for inputnumber paramitar insert to this list with reversed 
             for (int i = inputNumber1.Length - 1; i >= 0; i--)
             {
                 // temp bakardet bo gorine charaktor bo int 
-
-                inputNumber.Add(ChangCharTOnumber(inputNumber1[i]));
-           ;
-                
-             
+               inputNumber.Add(ChangCharTOnumber(inputNumber1[i].ToString()));
+               
             }
         }
         public double HexaDicimalToDicimal()
@@ -35,7 +32,7 @@ namespace ConversiotionNumber_finalProject
         }
         public string HexaDicimalToBinery()
         {
-            // koy anjam 
+
             List<int> total_valu_binery = new List<int>();
             for (int i = 0; i < this.inputNumber.Count; i++)
             {
@@ -55,24 +52,31 @@ namespace ConversiotionNumber_finalProject
             return ListChangeToString;
 
         }
-        static int ChangCharTOnumber(char num)
+         public string HexaDicimalToOctal()
+        {
+          string binery=  HexaDicimalToBinery();
+            BineryNmber by_num = new BineryNmber(binery);
+            return by_num.BineryToOctal();
+        }
+
+        static int ChangCharTOnumber(string num)
         {
             switch (num)
             {
-                case 'A':
+                case "A":
                     return 10;
-                case 'B':
+                case "B":
                     return 11;
-                case 'C':
+                case "C":
                     return 12;
-                case 'D':
+                case "D":
                     return 13;
-                case 'E':
+                case "E":
                     return 14;
-                case 'F':
+                case "F":
                     return 15;
                 default:
-                    return (int)(num - '0');
+                    return int.Parse(num);
             }
         }
     }

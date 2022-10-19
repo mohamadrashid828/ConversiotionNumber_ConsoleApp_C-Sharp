@@ -14,7 +14,9 @@ namespace ConversiotionNumber_finalProject
             //BineryNmber test = new BineryNmber(input);
             //Console.WriteLine(test.BineryToHxadicimal());
             HexaNumber test = new HexaNumber(input);
-            Console.WriteLine(test.HexaDicimalToBinery());
+            Console.WriteLine(test.HexaDicimalToOctal());
+
+
 
         }
       

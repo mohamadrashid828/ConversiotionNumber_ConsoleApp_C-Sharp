@@ -30,7 +30,7 @@ namespace ConversiotionNumber_finalProject
             }
             return DicimalNum;  
         }
-        public string OctalToBinery()
+        public string OctalToBinery( )
         {   // koy anjam 
             List<int> total_valu_binery = new List<int>();
             for (int i = 0; i < this.inputNumber.Count; i++)
