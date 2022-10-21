@@ -34,7 +34,6 @@ namespace ConversiotionNumber_finalProject
                 }
 
             }
-            Console.WriteLine(total);
             return total;
         }
         public String BineryToOctal()

@@ -13,9 +13,9 @@ namespace ConversiotionNumber_finalProject
         {
             this.InputNumber = inputNumber;
         }
-        public void DecimalToBinery()
+        public string DecimalToBinery()
         {
-           
+            string Str = "";
             List<int> a = new List<int>();
             for (int i = InputNumber; i > 0; i /= 2)
             {
@@ -24,13 +24,13 @@ namespace ConversiotionNumber_finalProject
             a.Reverse();
             foreach (var item in a)
             {
-                Console.Write(item);
+                Str += item;
             }
-            Console.WriteLine();
+            return Str;
         }
-        public void DecimalToOctal()
+        public string DecimalToOctal()
         {
-
+            string Str = "";
             List<int> a = new List<int>();
             for (int i = InputNumber; i > 0; i /= 8)
             {
@@ -39,13 +39,13 @@ namespace ConversiotionNumber_finalProject
             a.Reverse();
             foreach (var item in a)
             {
-                Console.Write(item);
+                Str += item;
             }
-            Console.WriteLine();
+            return Str;
         }
-        public void DecimalToHexaDecimal()
+        public string DecimalToHexaDecimal()
         {
-
+            string Str = "";
             List<int> a = new List<int>();
             for (int i = InputNumber; i > 0; i /= 16)
             {
@@ -54,9 +54,9 @@ namespace ConversiotionNumber_finalProject
             a.Reverse();
             foreach (var item in a)
             {
-                Console.Write(item);
+                Str+=item;
             }
-            Console.WriteLine();
+            return Str;
         }
     }
 }
