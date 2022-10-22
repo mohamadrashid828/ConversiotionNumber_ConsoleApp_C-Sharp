@@ -15,6 +15,9 @@ namespace ConversiotionNumber_finalProject
             //Console.WriteLine(test.BineryToHxadicimal());
             //HexaNumber test = new HexaNumber(input);
             //Console.WriteLine(test.HexaDicimalToOctal());
+            String z = "01010101";
+            var x = Console.Read();
+            Console.WriteLine(CheckBineryInput(z));
             int InputFrom, InputTo ;
             Console.WriteLine("                                              Number converstion");
            
@@ -29,7 +32,7 @@ namespace ConversiotionNumber_finalProject
                 Console.WriteLine(" please Just input number no String and simbul and char");
              goto a;
             }
-            string inputValu = Console.ReadLine().ToUpperInvariant();
+            string inputValu = Console.ReadLine();
             switch (InputFrom)
             {
                 case 1:
@@ -151,12 +154,16 @@ namespace ConversiotionNumber_finalProject
         static bool CheckBineryInput(string Str)
         {
             bool resolt = true;
+
             foreach (var item in Str)
             {
-                if (item!=0 || item !=1 )
+ 
+                if (true &&(item != '0' || item != '1'))
                 {
                     resolt = false;
+                    break;
                 }
+               
             }
             return resolt;  
         }
