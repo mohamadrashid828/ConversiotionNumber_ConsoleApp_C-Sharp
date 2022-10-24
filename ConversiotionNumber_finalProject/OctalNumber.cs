@@ -32,21 +32,19 @@ namespace ConversiotionNumber_finalProject
         }
         public string OctalToBinery( )
         {   // koy anjam 
-            List<int> total_valu_binery = new List<int>();
+            List<string> total_valu_binery = new List<string>();
+
             for (int i = 0; i < this.inputNumber.Count; i++)
             {
-                
-                for (int j = inputNumber[i]; j > 0; j /= 2)
-                {
-                    total_valu_binery.Add(j % 2);
-                }         
+                DecimalNumber n = new DecimalNumber(inputNumber[i]);
+                total_valu_binery.Add(n.DecimalToBinery(3));
             }
             total_valu_binery.Reverse();
             //gorine list bo string
             string ListChangeToString = "";
             foreach (var item in total_valu_binery)
             {
-                ListChangeToString+=item.ToString();
+                ListChangeToString+=item;
             }
             return ListChangeToString;
         }

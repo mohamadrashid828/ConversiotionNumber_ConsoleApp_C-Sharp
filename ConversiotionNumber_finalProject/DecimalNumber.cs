@@ -13,13 +13,15 @@ namespace ConversiotionNumber_finalProject
         {
             this.InputNumber = inputNumber;
         }
-        public string DecimalToBinery()
+        public string DecimalToBinery(int HowMonyDigit)
         {
             string Str = "";
             List<int> a = new List<int>();
-            for (int i = InputNumber; i > 0; i /= 2)
+            int j = 1;
+            for (int i = InputNumber; j <= HowMonyDigit; i /= 2)
             {
                 a.Add(i % 2);
+                j++;    
             }
             a.Reverse();
             foreach (var item in a)

@@ -32,11 +32,9 @@ namespace ConversiotionNumber_finalProject
         }
         public string HexaDicimalToBinery()
         {
-
             List<int> total_valu_binery = new List<int>();
             for (int i = 0; i < this.inputNumber.Count; i++)
             {
-
                 for (int j = inputNumber[i]; j > 0; j /= 2)
                 {
                     total_valu_binery.Add(j % 2);
