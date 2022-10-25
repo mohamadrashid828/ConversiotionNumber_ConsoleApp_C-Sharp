@@ -10,7 +10,7 @@ namespace ConversiotionNumber_finalProject
     {
         private  List<char> inputNumber = new List<char>();
 
-        public BineryNmber(string inputNumber)
+        public BineryNmber(string inputNumber ="")
         {
             //this for used for inputnumber paramitar insert to this list with reversed 
             for (int i = inputNumber.Length - 1; i >= 0; i--)
@@ -112,7 +112,7 @@ namespace ConversiotionNumber_finalProject
             comp.Reverse();
             return String.Join("", comp);
         }
-        static String ChangeNumberToChar(int num)
+       public  String ChangeNumberToChar(int num)
         {
             switch (num)
             {

@@ -12,8 +12,9 @@ namespace ConversiotionNumber_finalProject
         {
          
             int InputFrom, InputTo ;
-            Console.WriteLine("                                              Number converstion"); 
-        a:
+            Console.WriteLine("                                              Number converstion");
+            Console.WriteLine("NOTE: Whenever you wont to back to listmenu write (menu) or (*)");
+             star_Listminu:
             try
             {
                 InputFrom= listMenu("From");
@@ -22,14 +23,14 @@ namespace ConversiotionNumber_finalProject
             catch (Exception)
             {
                 Console.WriteLine(" please Just input number no String and simbul and char");
-             goto a;
+             goto star_Listminu;
             }
            while (true)
             {
-                Console.Write("input your number");
+                Console.Write("input your number : ");
                 string inputValu = Console.ReadLine().ToUpperInvariant();
-                if (inputValu == "menu")
-                     goto a;
+                if (inputValu == "menu" || inputValu == "*")
+                     goto star_Listminu;
                     switch (InputFrom)
                     {
                         case 1:
@@ -91,7 +92,7 @@ namespace ConversiotionNumber_finalProject
                             switch (InputTo)
                             {
                                 case 1:
-                                    Console.WriteLine(Oj_Decimal.DecimalToBinery(3));
+                                    Console.WriteLine(Oj_Decimal.DecimalToBinery());
                                     break;
                                 case 2:
                                     Console.WriteLine(Oj_Decimal.DecimalToOctal());
@@ -149,6 +150,7 @@ namespace ConversiotionNumber_finalProject
             }
             return input;
         }
+   
         static bool CheckBineryInput(string Str)
         {
             bool resolt = true;
@@ -188,10 +190,6 @@ namespace ConversiotionNumber_finalProject
             }
             return resolt;
         }
-        static void chek_your_choose(int valu)
-        {
-           
-        }
-
+       
     }
 }

@@ -50,7 +50,7 @@ namespace ConversiotionNumber_finalProject
             return ListChangeToString;
 
         }
-         public string HexaDicimalToOctal()
+        public string HexaDicimalToOctal()
         {
           string binery=  HexaDicimalToBinery();
             BineryNmber by_num = new BineryNmber(binery);
