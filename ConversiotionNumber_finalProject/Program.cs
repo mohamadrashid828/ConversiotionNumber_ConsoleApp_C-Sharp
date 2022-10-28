@@ -10,7 +10,6 @@ namespace ConversiotionNumber_finalProject
     {
         static void Main(string[] args)
         {
-         
             int InputFrom, InputTo ;
             Console.WriteLine("                                              Number converstion");
             Console.WriteLine("NOTE: Whenever you wont to back to listmenu write (menu) or (*)");
@@ -30,7 +29,7 @@ namespace ConversiotionNumber_finalProject
                 Console.Write("input your number : ");
                 string inputValu = Console.ReadLine().ToUpperInvariant();
                 if (inputValu == "menu" || inputValu == "*")
-                     goto star_Listminu;
+                  goto star_Listminu;
                     switch (InputFrom)
                     {
                         case 1:
@@ -150,7 +149,11 @@ namespace ConversiotionNumber_finalProject
             }
             return input;
         }
-   
+   /// <summary>
+   /// it used for chek input number is this binery or nobinery if input number not 0 or 1 return false else true
+   /// </summary>
+   /// <param name="Str"> input valu </param>
+   /// <returns></returns>
         static bool CheckBineryInput(string Str)
         {
             bool resolt = true;
@@ -172,6 +175,11 @@ namespace ConversiotionNumber_finalProject
             }
             return resolt;  
         }
+      /// <summary>
+      /// it used for check inbut if input between 0 and 7 return true else false
+      /// </summary>
+      /// <param name="Str"> input value </param>
+      /// <returns></returns>
         static bool CheckOctalInput(string Str)
         {
             bool resolt = true;

@@ -9,7 +9,6 @@ namespace ConversiotionNumber_finalProject
     internal class BineryNmber
     {
         private  List<char> inputNumber = new List<char>();
-
         public BineryNmber(string inputNumber ="")
         {
             //this for used for inputnumber paramitar insert to this list with reversed 
@@ -18,12 +17,11 @@ namespace ConversiotionNumber_finalProject
                 this.inputNumber.Add(inputNumber[i]);
             }
         }
-
         public int BineryToDecimal()
         {
             //total is used to seve all valu adintion 
             int total = 0;
-            // twan is used for to next step * 2 
+            // twan is used for to next step * 2   
             int twan = 1;
             //whith rule you must be reverse after fined
             for (int i = 0; i < inputNumber.Count; i++, twan *= 2)
@@ -132,5 +130,6 @@ namespace ConversiotionNumber_finalProject
                   return num.ToString();
             }
         }
+   
     }
 }

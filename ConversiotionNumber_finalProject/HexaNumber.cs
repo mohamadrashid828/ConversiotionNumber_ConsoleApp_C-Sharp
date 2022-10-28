@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace ConversiotionNumber_finalProject
 {
     internal class HexaNumber
     {
-        List<int> inputNumber = new List<int>();
-       
+        List<int> inputNumber = new List<int>();      
         public HexaNumber(string inputNumber1)
         {
             //this for used for inputnumber paramitar insert to this list with reversed 
@@ -56,7 +54,6 @@ namespace ConversiotionNumber_finalProject
             BineryNmber by_num = new BineryNmber(binery);
             return by_num.BineryToOctal();
         }
-
         static int ChangCharTOnumber(string num)
         {
             switch (num)

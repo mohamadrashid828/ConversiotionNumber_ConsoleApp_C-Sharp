@@ -10,6 +10,10 @@ namespace ConversiotionNumber_finalProject
     {
 
         List<int> inputNumber = new List<int>();
+        /// <summary>
+        /// it used for get input to string and revers it and conver to list int
+        /// </summary>
+        /// <param name="inputNumber1"> input value must be string</param>
         public OctalNumber(string inputNumber1)
         {
             //this for used for inputnumber paramitar insert to this list with reversed 
@@ -20,6 +24,10 @@ namespace ConversiotionNumber_finalProject
                 inputNumber.Add(temp);
             }
         }
+        /// <summary>
+        /// it us for convert Octal number to Dicimal number
+        /// </summary>
+        /// <returns> return value is equal to double </returns>
         public double OctalToDicimal()
         {   // koy anjam 
             double DicimalNum = 0;
@@ -30,6 +38,10 @@ namespace ConversiotionNumber_finalProject
             }
             return DicimalNum;  
         }
+        /// <summary>
+        /// it us for convert Octal number to Binery number 
+        /// </summary>
+        /// <returns> return value is equal to String </returns>
         public string OctalToBinery( )
         {   // koy anjam 
             List<string> total_valu_binery = new List<string>();

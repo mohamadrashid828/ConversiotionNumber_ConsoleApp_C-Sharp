@@ -9,10 +9,18 @@ namespace ConversiotionNumber_finalProject
     internal class DecimalNumber
     {
      private int InputNumber;
+        /// <summary>
+        /// constractor for get valu number 
+        /// </summary>
+        /// <param name="inputNumber"> input number</param>
       public  DecimalNumber(int inputNumber)
         {
             this.InputNumber = inputNumber;
         }
+     /// <summary>
+     /// it us for convert decimal number to binery number
+     /// </summary>
+     /// <returns> return value is equal to string </returns>
         public string DecimalToBinery()
         {
             string Str = "";
@@ -28,6 +36,10 @@ namespace ConversiotionNumber_finalProject
             }
             return Str;
         }
+        /// <summary>
+        /// it us for convert decimal number to Octal number
+        /// </summary>
+        /// <returns> return value is equal to string </returns>
         public string DecimalToOctal()
         {
             string Str = "";
@@ -43,6 +55,10 @@ namespace ConversiotionNumber_finalProject
             }
             return Str;
         }
+        /// <summary>
+        /// it us for convert decimal number to hexadecimal number
+        /// </summary>
+        /// <returns> return value is equal to string </returns>
         public string DecimalToHexaDecimal()
         {
             BineryNmber bineryNmber = new BineryNmber();
@@ -59,7 +75,11 @@ namespace ConversiotionNumber_finalProject
             }
             return Str;
         }
-        // tanha bo awshuenanay ka pewist dakat digit dyari bkait bakary denit
+        /// <summary>
+        /// tanha bo awshuenanay ka pewist dakat digit dyari bkait bakary denit
+        /// </summary>
+        /// <param name="HowMonyDigit"> wour convertpr how mony digit reprresent</param>
+        /// <returns> return value is equal to string </returns>
         public string DecimalToBinery(int HowMonyDigit)
         {
             HowMonyDigit = HowMonyDigit == 0 ? 1 : HowMonyDigit;
