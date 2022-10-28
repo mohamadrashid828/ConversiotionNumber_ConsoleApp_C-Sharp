@@ -60,7 +60,11 @@ namespace ConversiotionNumber_finalProject
             }
             return ListChangeToString;
         }
-        public  string OctalToHexaDicemal()
+        /// <summary>
+        /// it us for convert Octal number to HEXADICIMAL number 
+        /// </summary>
+        /// <returns> return value is equal to String </returns>
+        public string OctalToHexaDicemal()
         {
             string binery = OctalToBinery();
             BineryNmber Object_binery =new BineryNmber(binery);

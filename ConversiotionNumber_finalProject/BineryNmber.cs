@@ -9,6 +9,10 @@ namespace ConversiotionNumber_finalProject
     internal class BineryNmber
     {
         private  List<char> inputNumber = new List<char>();
+        /// <summary>
+        /// this constractor use for  get input and reversid also iserted to arrey for the work easy
+        /// </summary>
+        /// <param name="inputNumber"></param>
         public BineryNmber(string inputNumber ="")
         {
             //this for used for inputnumber paramitar insert to this list with reversed 
@@ -17,6 +21,10 @@ namespace ConversiotionNumber_finalProject
                 this.inputNumber.Add(inputNumber[i]);
             }
         }
+        /// <summary>
+        /// this method it use for convert binery number to decimal number 
+        /// </summary>
+        /// <returns> int</returns>
         public int BineryToDecimal()
         {
             //total is used to seve all valu adintion 
@@ -34,6 +42,10 @@ namespace ConversiotionNumber_finalProject
             }
             return total;
         }
+        /// <summary>
+        /// this method it use for convert binery number to Octal number 
+        /// </summary>
+        /// <returns> int</returns>
         public String BineryToOctal()
         {
             // comp bakardet bo away 3 digt 3 digt kobkatawaw la indexy era dabne dwatr revers bkain
@@ -71,6 +83,10 @@ namespace ConversiotionNumber_finalProject
             comp.Reverse();         
             return String.Join("", comp);
         }
+        /// <summary>
+        /// this method it use for convert binery number to hexaDecimal number 
+        /// </summary>
+        /// <returns> int</returns>
         public String BineryToHxadicimal()
         {
             // comp bakardet bo away 4 digt 4 digt kobkatawaw la indexy era dabne dwatr revers bkain
@@ -110,6 +126,11 @@ namespace ConversiotionNumber_finalProject
             comp.Reverse();
             return String.Join("", comp);
         }
+        /// <summary>
+        /// becouse of hexanumber consists of number and charector we nedd change number to char such(A,B,C..)
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
        public  String ChangeNumberToChar(int num)
         {
             switch (num)
