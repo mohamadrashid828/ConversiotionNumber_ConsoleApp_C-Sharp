@@ -29,7 +29,7 @@ namespace ConversiotionNumber_finalProject
         /// </summary>
         /// <param name="Str"> input valu </param>
         /// <returns></returns>
-        public bool CheckBineryInput(string Str)
+        protected bool CheckBineryInput(string Str)
         {
             bool resolt = true;
 
