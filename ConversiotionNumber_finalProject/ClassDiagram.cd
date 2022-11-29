@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ConversiotionNumber_finalProject.BineryNmber">
+    <Position X="2.75" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAACAAAAAAAAAEAAEAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BineryNmber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConversiotionNumber_finalProject.DecimalNumber">
+    <Position X="7.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAIAABAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DecimalNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConversiotionNumber_finalProject.HexaNumber">
+    <Position X="7.25" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAACAAAAAAAACAAAAAEIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HexaNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConversiotionNumber_finalProject.OctalNumber">
+    <Position X="2.75" Y="3.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>OctalNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConversiotionNumber_finalProject.Program">
+    <Position X="0.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

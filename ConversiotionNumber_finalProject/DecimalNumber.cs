@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace ConversiotionNumber_finalProject
 {
-    internal class DecimalNumber
+    public class DecimalNumber
     {
-     private int InputNumber;
+         private int InputNumber;
+        //public static int _InputNumber{ 
+        //    set { InputNumber = value; } 
+        //}
+
         /// <summary>
         /// constractor for get valu number 
         /// </summary>
         /// <param name="inputNumber"> input number</param>
-      public  DecimalNumber(int inputNumber)
+        public DecimalNumber(int inputNumber)
         {
             this.InputNumber = inputNumber;
         }
-     /// <summary>
-     /// it us for convert decimal number to binery number
-     /// </summary>
-     /// <returns> return value is equal to string </returns>
+        /// <summary>
+        /// it us for convert decimal number to binery number
+        /// </summary>
+        /// <returns> return value is equal to string </returns>
         public string DecimalToBinery()
         {
             string Str = "";
@@ -61,7 +65,7 @@ namespace ConversiotionNumber_finalProject
         /// <returns> return value is equal to string </returns>
         public string DecimalToHexaDecimal()
         {
-            BineryNmber bineryNmber = new BineryNmber();
+           
             string Str = "";
             List<int> a = new List<int>();
             for (int i = InputNumber; i > 0; i /= 16)
@@ -71,7 +75,7 @@ namespace ConversiotionNumber_finalProject
             a.Reverse();
             foreach (var item in a)
             {
-                Str+= bineryNmber.ChangeNumberToChar(item); 
+                Str+= BineryNmber.ChangeNumberToChar(item); 
             }
             return Str;
         }
@@ -98,5 +102,7 @@ namespace ConversiotionNumber_finalProject
             }
             return Str;
         }
+
+       ~DecimalNumber() { }
     }
 }

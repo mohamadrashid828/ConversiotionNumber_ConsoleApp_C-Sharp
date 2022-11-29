@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConversiotionNumber_finalProject
 {
-    internal class BineryNmber
+    public class BineryNmber
     {
-        private  List<char> inputNumber = new List<char>();
+        List<char> inputNumber = new List<char>();
         /// <summary>
         /// this constractor use for  get input and reversid also iserted to arrey for the work easy
         /// </summary>
@@ -131,26 +131,19 @@ namespace ConversiotionNumber_finalProject
         /// </summary>
         /// <param name="num"></param>
         /// <returns></returns>
-       public  String ChangeNumberToChar(int num)
+       public static String ChangeNumberToChar(int num)
         {
-            switch (num)
+            return num switch
             {
-                case 10:
-                    return "A";
-                case 11:
-                    return "B";
-                case 12:
-                    return "C";
-                case 13:
-                    return "D";
-                case 14:
-                    return "E";
-                case 15:
-                    return "F";
-                default:
-                  return num.ToString();
-            }
+                10 => "A",
+                11 => "B",
+                12 => "C",
+                13 => "D",
+                14 => "E",
+                15 => "F",
+                _ => num.ToString(),
+            };
         }
-   
+        ~BineryNmber() { }
     }
 }

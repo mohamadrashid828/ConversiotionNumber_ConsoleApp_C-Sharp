@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace ConversiotionNumber_finalProject
 {
-    internal class HexaNumber
+     class HexaNumber 
     {
         List<int> inputNumber = new List<int>();  
         /// <summary>
@@ -66,9 +66,9 @@ namespace ConversiotionNumber_finalProject
         /// <returns>always return String</returns>
         public string HexaDicimalToOctal()
         {
-          string binery=  HexaDicimalToBinery();
-            BineryNmber by_num = new BineryNmber(binery);
-            return by_num.BineryToOctal();
+            string binery=  HexaDicimalToBinery();
+            BineryNmber ob = new BineryNmber(binery);
+            return ob.BineryToOctal();
         }
         /// <summary>
         /// it used for change char to number becouse hexa number some tims can charector
@@ -94,6 +94,9 @@ namespace ConversiotionNumber_finalProject
                 default:
                     return int.Parse(num);
             }
+        }
+        ~HexaNumber()
+        {
         }
     }
 }

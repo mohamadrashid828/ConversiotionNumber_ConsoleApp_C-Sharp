@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConversiotionNumber_finalProject
 {
-    public class OctalNumber
+    public class OctalNumber :BineryNmber
     {
 
         List<int> inputNumber = new List<int>();
@@ -71,6 +71,8 @@ namespace ConversiotionNumber_finalProject
             return Object_binery.BineryToHxadicimal(); 
         }
 
-
+        ~OctalNumber()
+        {
+        }
     }
 }
