@@ -20,6 +20,7 @@ namespace ConversiotionNumber_finalProject
             {
                 InputFrom = listMenu("From");
                 InputTo = listMenu("To  ");
+                Console.WriteLine($" **********************************************convert {get_name(InputFrom)} number to {get_name(InputTo)} number ");
             }
             catch (Exception)
             {
@@ -28,29 +29,34 @@ namespace ConversiotionNumber_finalProject
             }
             while (true)
             {
-                Console.Write("input your number : ");
+                Console.Write($"input {get_name(InputFrom)} number : ");
                 string inputValu = Console.ReadLine().ToUpperInvariant();
                 if (inputValu == "menu" || inputValu == "*")
                     goto star_Listminu;
+                
                 switch (InputFrom)
                 {
                     case 1:
                         if (CheckBineryInput(inputValu))
                         {
+                          
+                           
                             BineryNmber b = new BineryNmber(inputValu);
                             switch (InputTo)
                             {
+
                                 case 1:
-                                    Console.WriteLine(inputValu);
+                                    preint_resolt(inputValu, inputValu, get_name(InputFrom), get_name(InputTo));
+                                  
                                     break;
                                 case 2:
-                                    Console.WriteLine(b.BineryToOctal());
-                                    break;
+                                    preint_resolt(b.BineryToOctal(), inputValu, get_name(InputFrom), get_name(InputTo));
+                                     break;
                                 case 3:
-                                    Console.WriteLine(b.BineryToDecimal());
+                                    preint_resolt(b.BineryToDecimal(), inputValu, get_name(InputFrom), get_name(InputTo));                        
                                     break;
                                 case 4:
-                                    Console.WriteLine(b.BineryToHxadicimal());
+                                    preint_resolt(b.BineryToHxadicimal(), inputValu, get_name(InputFrom), get_name(InputTo));
                                     break;
                             }
                         }
@@ -67,16 +73,19 @@ namespace ConversiotionNumber_finalProject
                             switch (InputTo)
                             {
                                 case 1:
-                                    Console.WriteLine(Oj_Octal.OctalToBinery());
+                                    preint_resolt(Oj_Octal.OctalToBinery(), inputValu, get_name(InputFrom), get_name(InputTo));                        
                                     break;
                                 case 2:
-                                    Console.WriteLine(inputValu);
+                                    preint_resolt(inputValu, inputValu, get_name(InputFrom), get_name(InputTo));
+                                   
                                     break;
                                 case 3:
-                                    Console.WriteLine(Oj_Octal.OctalToDicimal());
+                                    preint_resolt(Oj_Octal.OctalToDicimal(), inputValu, get_name(InputFrom), get_name(InputTo));
+                                  
                                     break;
                                 case 4:
-                                    Console.WriteLine(Oj_Octal.OctalToHexaDicemal());
+                                    preint_resolt(Oj_Octal.OctalToHexaDicemal(), inputValu, get_name(InputFrom), get_name(InputTo));
+                                    
                                     break;
                             }
                         }
@@ -93,16 +102,16 @@ namespace ConversiotionNumber_finalProject
                             switch (InputTo)
                             {
                                 case 1:
-                                    Console.WriteLine(Oj_Decimal.DecimalToBinery());
+                                    preint_resolt(Oj_Decimal.DecimalToBinery(), inputValu, get_name(InputFrom), get_name(InputTo));
                                     break;
                                 case 2:
-                                    Console.WriteLine(Oj_Decimal.DecimalToOctal());
+                                    preint_resolt(Oj_Decimal.DecimalToOctal(), inputValu, get_name(InputFrom), get_name(InputTo));
                                     break;
                                 case 3:
-                                    Console.WriteLine(inputValu);
+                                    preint_resolt(inputValu, inputValu, get_name(InputFrom), get_name(InputTo));
                                     break;
                                 case 4:
-                                    Console.WriteLine(Oj_Decimal.DecimalToHexaDecimal());
+                                    preint_resolt(Oj_Decimal.DecimalToHexaDecimal(), inputValu, get_name(InputFrom), get_name(InputTo));
                                     break;
                             }
                         }
@@ -112,21 +121,30 @@ namespace ConversiotionNumber_finalProject
                         }
                         break;
                     case 4:
-                        HexaNumber Oj_hexaDicemal = new HexaNumber(inputValu);
-                        switch (InputTo)
+                        try
                         {
-                            case 1:
-                                Console.WriteLine(Oj_hexaDicemal.HexaDicimalToBinery());
-                                break;
-                            case 2:
-                                Console.WriteLine(Oj_hexaDicemal.HexaDicimalToOctal());
-                                break;
-                            case 3:
-                                Console.WriteLine(Oj_hexaDicemal.HexaDicimalToDicimal());
-                                break;
-                            case 4:
-                                Console.WriteLine(inputValu);
-                                break;
+                            HexaNumber Oj_hexaDicemal = new HexaNumber(inputValu);
+                        
+                            switch (InputTo)
+                            {
+                                case 1:
+                                    preint_resolt(Oj_hexaDicemal.HexaDicimalToBinery(), inputValu, get_name(InputFrom), get_name(InputTo));
+                                    break;
+                                case 2:
+                                    preint_resolt(Oj_hexaDicemal.HexaDicimalToOctal(), inputValu, get_name(InputFrom), get_name(InputTo));
+                                    break;
+                                case 3:
+                                    preint_resolt(Oj_hexaDicemal.HexaDicimalToDicimal(), inputValu, get_name(InputFrom), get_name(InputTo));
+                                    break;
+                                case 4:
+                                    preint_resolt(inputValu, inputValu, get_name(InputFrom), get_name(InputTo));
+                                    break;
+                            }
+                        }
+                        catch (Exception)
+                        {
+
+                            Console.WriteLine("please just input number or char  A,B,C,D,E,F ");
                         }
                         break;
 

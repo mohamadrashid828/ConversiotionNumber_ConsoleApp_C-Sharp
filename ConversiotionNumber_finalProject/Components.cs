@@ -8,6 +8,35 @@ namespace ConversiotionNumber_finalProject
 {
      class Components
     {
+        /// <summary>
+        /// it used to show resolt 
+        /// </summary>
+        /// <param name="a"> resolt </param>
+        /// <param name="input_valu">input valu </param>
+        /// <param name="from"> select from number </param>
+        /// <param name="to">select to  number </param>
+        protected void preint_resolt(dynamic a ,dynamic input_valu,string from,string to)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"number ( {input_valu} ){from} is equal to ({a}) in {to} number");
+            Console.WriteLine();
+        }
+        protected string get_name(int num )
+        {
+            switch (num)
+            {
+                case 1:
+                    return "binery";
+                case 2:
+                    return "octal";
+                case 3:
+                    return "Decimal";
+                case 4:
+                    return "HexaDecimal";
+                    default:
+                    return "";
+            }
+        }
         protected int listMenu(string Str)
         {
         minu:

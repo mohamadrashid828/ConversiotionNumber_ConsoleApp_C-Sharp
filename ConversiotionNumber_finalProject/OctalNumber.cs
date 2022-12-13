@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConversiotionNumber_finalProject
 {
-    public class OctalNumber :BineryNmber
+    public class OctalNumber 
     {
 
         List<int> inputNumber = new List<int>();

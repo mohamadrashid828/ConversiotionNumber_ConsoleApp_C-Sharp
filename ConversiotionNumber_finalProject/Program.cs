@@ -10,9 +10,8 @@ namespace ConversiotionNumber_finalProject
     {
         static void Main(string[] args)
         {
-            Switch obj =new Switch();   
-        }
-      
-
+            Switch obj =new Switch();
+           
+        }  
     }
 }

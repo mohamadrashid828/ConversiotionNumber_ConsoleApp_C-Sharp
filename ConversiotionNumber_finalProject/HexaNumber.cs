@@ -42,22 +42,20 @@ namespace ConversiotionNumber_finalProject
         /// <returns>always return String</returns>
         public string HexaDicimalToBinery()
         {
-            List<int> total_valu_binery = new List<int>();
-            for (int i = 0; i < this.inputNumber.Count; i++)
+            string resolt = "";
+            List<string> inputNumber1 = new List<string>();
+            for (int i = 0; i < inputNumber.Count; i++)
             {
-                for (int j = inputNumber[i]; j > 0; j /= 2)
-                {
-                    total_valu_binery.Add(j % 2);
-                }
+
+                DecimalNumber d = new DecimalNumber(inputNumber[i]);
+                inputNumber1.Add( d.DecimalToBinery(4));
             }
-            total_valu_binery.Reverse();
-            //gorine list bo string
-            string ListChangeToString = "";
-            foreach (var item in total_valu_binery)
+            inputNumber1.Reverse();
+            for (int i = 0; i < inputNumber.Count; i++)
             {
-                ListChangeToString += item.ToString();
+                resolt += inputNumber1[i];
             }
-            return ListChangeToString;
+            return resolt;
 
         }
         /// <summary>
@@ -66,9 +64,9 @@ namespace ConversiotionNumber_finalProject
         /// <returns>always return String</returns>
         public string HexaDicimalToOctal()
         {
-            string binery=  HexaDicimalToBinery();
-            BineryNmber ob = new BineryNmber(binery);
-            return ob.BineryToOctal();
+           string a= HexaDicimalToDicimal().ToString();
+            DecimalNumber e = new DecimalNumber(int.Parse(a));
+           return e.DecimalToOctal();
         }
         /// <summary>
         /// it used for change char to number becouse hexa number some tims can charector
